@@ -7,11 +7,11 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        createPremiumAdjustment(data: CreatePremuimAdjustment!): premuimadjustment!
+        createPremiumAdjustment(data: CreatePremiumAdjustment!): premuimadjustment!
         updatePremiumAdjustment(id:ID!, data: UpdatePremuimAdjustment!): premuimadjustment!
     }
 
-    input CreatePremuimAdjustment {
+    input CreatePremiumAdjustment {
         product_name: String!
         report_period: String!
         status: String!
