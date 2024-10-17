@@ -3,12 +3,12 @@ import { gql } from 'apollo-server';
 const typeDefs = gql`
   type Query {
         creditunions(query: String) : [CreditUnion!]!
-        premiumadjustments(query: String) : [premuimadjustment!]!
+        premiumadjustments(query: String) : [premiumadjustment!]!
     }
 
     type Mutation {
-        createPremiumAdjustment(data: CreatePremiumAdjustment!): premuimadjustment!
-        updatePremiumAdjustment(id:ID!, data: UpdatePremuimAdjustment!): premuimadjustment!
+        createPremiumAdjustment(data: CreatePremiumAdjustment!): premiumadjustment!
+        updatePremiumAdjustment(id:ID!, data: UpdatepremiumAdjustment!): premiumadjustment!
     }
 
     input CreatePremiumAdjustment {
@@ -28,7 +28,7 @@ const typeDefs = gql`
         pacreditunion: ID!
     }
 
-    input UpdatePremuimAdjustment {
+    input UpdatepremiumAdjustment {
         total_borrower_fees:Float!
         CU_Retail_Rate:Float!
         protected_loan_amount:Float!
@@ -43,11 +43,11 @@ const typeDefs = gql`
         creditUnionname: String!
         contract_number: String!
         state: String!
-        premiumadjustments: [premuimadjustment!]!
+        premiumadjustments: [premiumadjustment!]!
        
     }
 
-    type premuimadjustment {
+    type premiumadjustment {
         id:ID!
         product_name: String!
         report_period: String!

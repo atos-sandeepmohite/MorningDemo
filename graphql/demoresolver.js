@@ -129,12 +129,12 @@ Mutation: {
 },
 CreditUnion: {
     premiumadjustments(parent, args, ctx, info) {
-        return premiumadjustments.filter((premuimadjustment) => {
-            return premuimadjustment.pacreditunion === parent.id
+        return premiumadjustments.filter((premiumadjustment) => {
+            return premiumadjustment.pacreditunion === parent.id
         })
     }
 },
-premuimadjustment: {
+premiumadjustment: {
     pacreditunion(parent, args, ctx, info) {
         return creditunions.find((creditunion) => {
             return creditunion.id === parent.pacreditunion
